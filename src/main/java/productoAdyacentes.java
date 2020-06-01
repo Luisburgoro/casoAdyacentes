@@ -16,8 +16,6 @@ public class productoAdyacentes {
                 }
 
              }
-
-
         }catch (ArrayIndexOutOfBoundsException e){
 }      return max;
     }
