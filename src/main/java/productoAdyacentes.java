@@ -1,25 +1,25 @@
 public class productoAdyacentes {
 
 
-    public static int productoAdyacentes(int [] arr){
+    public int productoAdyacentes(int [] arr){
          int i;
-         int arrAux = 0;
+         int Aux;
          int max = 0;
 
         try{
             for ( i = 0; i < arr.length; i++) {
 
-                 arrAux = arr[i] * arr[i + 1];
+                 Aux = arr[i] * arr[i + 1];
 
-                if(max<arrAux) {
-                 max=arrAux;
+                if(max<Aux) {
+                 max=Aux;
                 }
 
              }
 
 
         }catch (ArrayIndexOutOfBoundsException e){
-
+            System.out.println("Error.");
 }
 
       return max;

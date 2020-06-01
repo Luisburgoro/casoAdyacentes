@@ -20,7 +20,6 @@ public class productoAdyacentesTest {
 
     @Test
     public void productoAdyacentes() {
-        int [] arrAux = new int [5];
        int[] arr = new int[]{1, -4, 2, 2, 5, -1};
 
        int  resultado=10;
@@ -29,4 +28,5 @@ public class productoAdyacentesTest {
         assertEquals(resultado,resultadoEsperado);
 
     }
+
 }
