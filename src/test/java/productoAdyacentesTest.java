@@ -24,7 +24,7 @@ public class productoAdyacentesTest {
        int[] arr = new int[]{1, -4, 2, 2, 5, -1};
 
        int  resultado=10;
-       int resultadoEsperado=casos.productoAdyacentes(arr,arrAux);
+       int resultadoEsperado=casos.productoAdyacentes(arr);
 
         assertEquals(resultado,resultadoEsperado);
 

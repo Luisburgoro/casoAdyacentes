@@ -1,21 +1,19 @@
 public class productoAdyacentes {
 
 
-     public  int productoAdyacentes(int [] arr,int[] arrAux){
+    public static int productoAdyacentes(int [] arr){
          int i;
-         int max= arrAux[0];
-
+         int arrAux = 0;
+         int max = 0;
 
         try{
             for ( i = 0; i < arr.length; i++) {
 
-             arrAux[i] = arr[i] * arr[i + 1];
+                 arrAux = arr[i] * arr[i + 1];
 
-             if(max<arrAux[i]) {
-
-                 max=arrAux[i];
-
-             }
+                if(max<arrAux) {
+                 max=arrAux;
+                }
 
              }
 
