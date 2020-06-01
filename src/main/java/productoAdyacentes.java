@@ -19,10 +19,7 @@ public class productoAdyacentes {
 
 
         }catch (ArrayIndexOutOfBoundsException e){
-            System.out.println("Error.");
-}
-
-      return max;
+}      return max;
     }
 
 
