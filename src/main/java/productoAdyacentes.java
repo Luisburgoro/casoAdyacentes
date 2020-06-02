@@ -1,23 +1,28 @@
 public class productoAdyacentes {
 
 
-    public int productoAdyacentes(int [] arr){
-         int i;
-         int Aux;
-         int max = 0;
+    public int productoAdyacentes(int [] arr) {
+        int i;
+        int Aux;
+        int max = 0;
 
-        try{
-            for ( i = 0; i < arr.length; i++) {
+        if (arr.length == 1) {
 
-                 Aux = arr[i] * arr[i + 1];
+            System.out.println("Arreglo con un único elemento.");
+            return arr[0];
 
-                if(max<Aux) {
-                 max=Aux;
+        } else {
+            for (i = 0; i < arr.length - 1; i++) {
+
+                Aux = arr[i] * arr[i + 1];
+
+                if (max < Aux) {
+                    max = Aux;
                 }
 
-             }
-        }catch (ArrayIndexOutOfBoundsException e){
-}      return max;
+            }
+            return max;
+        }
     }
 
 

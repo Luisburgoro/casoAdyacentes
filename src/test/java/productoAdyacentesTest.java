@@ -27,8 +27,8 @@ public class productoAdyacentesTest {
     }
     @Test
     public void TestArrayRango1 () {
-        int[] exx = new int[]{1};
-        int resultado2 = 1;
+        int[] exx = new int[]{5};
+        int resultado2 = 5;
         int resultadoEsperado2 = casos.productoAdyacentes(exx);
         assertEquals(resultado2, resultadoEsperado2);
     }
