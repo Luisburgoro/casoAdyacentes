@@ -9,15 +9,32 @@ public class productoAdyacentes {
         System.out.println("El producto mayor es: "+mayor);
     }
     
-     public static int[] creacionArreglo (){
-            System.out.println("Ingrese la cantidad de números del arreglo:");
-            int cant = validar();
+    public static int[] creacionArreglo (){
+
+            System.out.println("Ingrese cantidad de numeros que desee ingresar");
+            int cant=0;
+
+            while (cant<1 || cant>21){
+                cant = validar();
+                if (cant<1 || cant>21){
+                    System.out.println("Error al ingresar cantidad, es solo entre 1 y 21");
+                }
+            }
+
             int[] arr = new int[cant];
 
             for (int i=0; i<arr.length; i++) {
                 System.out.println("Número "+i);
-                arr[i]= validar();
+                
+                while (arr[i]<-1000 || arr[i]>1000){
+                    arr[i]= validar();
+                    if (arr[i]<-1000 || arr[i]>1000){
+                        System.out.println("Error al ingresar numero, solo puedes ingresar valores desde -1000 a 1000");
+                    }
+                }
+                
             }
+
             return arr;
         }
 
