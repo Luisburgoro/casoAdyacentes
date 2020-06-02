@@ -1,33 +1,61 @@
+import java.util.Scanner;
+
 public class productoAdyacentes {
 
+    public static void main(String[] args){
+        
+        int[] num = creacionArreglo();
+        int mayor= productoAdyacentes(num);
+        System.out.println("El num mayor es: "+mayor);
+    }
+    
+     public static int[] creacionArreglo (){
+            System.out.println("Ingrese cantidad de numeros que desee ingresar");
+            int cant = validar();
+            int[] arr = new int[cant];
 
-     public  int productoAdyacentes(int [] arr,int[] arrAux){
-         int i;
-         int max= arrAux[0];
+            for (int i=0; i<arr.length; i++) {
+                System.out.println("numero "+i);
+                arr[i]= validar();
+            }
+            return arr;
+        }
 
+    public int productoAdyacentes(int [] arr) {
+        int i;
+        int Aux;
+        int max = 0;
 
-        try{
-            for ( i = 0; i < arr.length; i++) {
+        if (arr.length == 1) {
 
-             arrAux[i] = arr[i] * arr[i + 1];
+            System.out.println("Arreglo con un único elemento.");
+            return arr[0];
 
-             if(max<arrAux[i]) {
+        } else {
+            for (i = 0; i < arr.length - 1; i++) {
 
-                 max=arrAux[i];
+                Aux = arr[i] * arr[i + 1];
 
-             }
+                if (max < Aux) {
+                    max = Aux;
+                }
 
-             }
-
-
-        }catch (ArrayIndexOutOfBoundsException e){
-
-}
-
-      return max;
+            }
+            return max;
+        }
     }
 
+    public static int validar(){
+        Scanner input = new Scanner(System.in);
 
+        int valor;
+        while(!input.hasNextInt()){
+            System.err.println("Introduzca un número entero como respuesta.");
+            input.next();
+        }
+        valor = input.nextInt();
+        return valor;
+    }
 
 }
 
