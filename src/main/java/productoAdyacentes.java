@@ -1,5 +1,10 @@
+import java.util.Scanner;
+
 public class productoAdyacentes {
 
+    public static void main(String[] args){
+
+    }
 
     public int productoAdyacentes(int [] arr) {
         int i;
@@ -25,7 +30,17 @@ public class productoAdyacentes {
         }
     }
 
+    public static int validar(){
+        Scanner input = new Scanner(System.in);
 
+        int valor;
+        while(!input.hasNextInt()){
+            System.err.println("Introduzca un número entero como respuesta.");
+            input.next();
+        }
+        valor = input.nextInt();
+        return valor;
+    }
 
 }
 
