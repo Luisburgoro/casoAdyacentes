@@ -6,22 +6,22 @@ public class productoAdyacentes {
         
         int[] num = creacionArreglo();
         int mayor= productoAdyacentes(num);
-        System.out.println("El num mayor es: "+mayor);
+        System.out.println("El producto mayor es: "+mayor);
     }
     
      public static int[] creacionArreglo (){
-            System.out.println("Ingrese cantidad de numeros que desee ingresar");
+            System.out.println("Ingrese la cantidad de números del arreglo:");
             int cant = validar();
             int[] arr = new int[cant];
 
             for (int i=0; i<arr.length; i++) {
-                System.out.println("numero "+i);
+                System.out.println("Número "+i);
                 arr[i]= validar();
             }
             return arr;
         }
 
-    public int productoAdyacentes(int [] arr) {
+    public static int productoAdyacentes(int [] arr) {
         int i;
         int Aux;
         int max = 0;
